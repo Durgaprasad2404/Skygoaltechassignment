@@ -12,7 +12,7 @@ require("../db/connection");
 const User = require("../model/userSchema");
 
 // Register route
-router.post("/api/register", async (req, res) => {
+router.post("/api/signup", async (req, res) => {
   // Request body validation
   const { Username, email, password } = req.body;
   if (!Username || !email || !password) {
