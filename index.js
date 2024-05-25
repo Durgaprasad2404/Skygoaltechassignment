@@ -7,22 +7,22 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-// Load environment variables from .env file
+//  from .env file
 dotenv.config({ path: "./config.env" });
 
-// Connect to MongoDB
+// Connect DB
 require("./db/connection");
 
-// Middleware to parse JSON request bodies
+// Middleware to parseJSON
 app.use(express.json());
 
-// Middleware for handling CORS
+// Middleware CORS mid
 app.use(cors());
 
-// Middleware to parse cookies attached to the request
+// Middleware parse-cookies
 app.use(cookieParser());
 
-// Middleware to parse JSON request bodies (alternative method)
+// Middleware body parse-JSON
 app.use(bodyParser.json());
 
 // Routes
