@@ -17,12 +17,7 @@ require("./db/connection");
 app.use(express.json());
 
 // Middleware for handling CORS
-app.use(
-  cors({
-    origin: "https://construction-g5o3.onrender.com",
-    credentials: true,
-  })
-);
+app.use(cors());
 
 // Middleware to parse cookies attached to the request
 app.use(cookieParser());
